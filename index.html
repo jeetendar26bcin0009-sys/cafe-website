@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to Home Cafe — coffee, fresh bakes, and good moments.">
+  <title>Home Cafe | Coffee & Good Moments</title>
+  <style>
+    :root { --coffee:#4b2e22; --cream:#fff8ef; --caramel:#c88752; --ink:#2b211d; --muted:#75645b; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body { font-family:Arial, Helvetica, sans-serif; color:var(--ink); background:var(--cream); line-height:1.6; }
+    header { position:sticky; top:0; z-index:10; background:rgba(255,248,239,.96); border-bottom:1px solid #ead9c8; }
+    nav { max-width:1100px; margin:auto; padding:16px 22px; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .logo { font-size:1.35rem; font-weight:800; color:var(--coffee); letter-spacing:.4px; }
+    .logo span { color:var(--caramel); }
+    .nav-links { display:flex; flex-wrap:wrap; gap:22px; list-style:none; }
+    .nav-links a { text-decoration:none; color:var(--ink); font-weight:700; font-size:.95rem; }
+    .nav-links a:hover { color:var(--caramel); }
+    .hero { min-height:540px; display:grid; place-items:center; text-align:center; padding:80px 22px; color:white; background:linear-gradient(90deg,rgba(36,22,16,.78),rgba(36,22,16,.28)), url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1800&q=85') center/cover; }
+    .hero-content { max-width:760px; }
+    .eyebrow { text-transform:uppercase; letter-spacing:3px; font-size:.8rem; font-weight:700; color:#f1c49b; }
+    h1 { font-size:clamp(2.6rem,7vw,5rem); line-height:1.08; margin:16px 0; }
+    .hero p { max-width:590px; margin:0 auto 28px; font-size:1.1rem; color:#fff4e8; }
+    .btn { display:inline-block; background:var(--caramel); color:white; border:0; padding:13px 23px; border-radius:30px; text-decoration:none; font-weight:800; cursor:pointer; }
+    .btn:hover { background:#a96839; }
+    section { max-width:1100px; margin:auto; padding:76px 22px; }
+    .section-head { text-align:center; margin-bottom:35px; }
+    .section-head p { color:var(--muted); margin-top:8px; }
+    h2 { font-size:clamp(2rem,4vw,2.8rem); color:var(--coffee); line-height:1.2; }
+    .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:35px; align-items:center; }
+    .about-photo { width:100%; min-height:300px; object-fit:cover; border-radius:18px; }
+    .about-copy p { margin:14px 0; color:var(--muted); }
+    .menu-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .menu-card { background:white; border:1px solid #f0e2d5; padding:24px; border-radius:16px; box-shadow:0 8px 25px rgba(75,46,34,.06); }
+    .menu-card .emoji { font-size:2rem; }
+    .menu-card h3 { color:var(--coffee); margin:10px 0 5px; }
+    .menu-card p { color:var(--muted); font-size:.94rem; }
+    .price { display:block; color:#a96839; font-weight:800; margin-top:14px; }
+    .gallery-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    .gallery-grid img { width:100%; height:220px; object-fit:cover; border-radius:14px; }
+    .contact { max-width:none; background:#f0e2d5; }
+    .contact-inner { max-width:900px; margin:auto; padding:0 22px; text-align:center; }
+    .contact-inner p { color:var(--muted); margin:12px 0 22px; }
+    .contact-details { display:flex; flex-wrap:wrap; justify-content:center; gap:22px; margin:25px 0; }
+    footer { background:var(--coffee); color:#fff3e7; text-align:center; padding:22px; font-size:.9rem; }
+    @media(max-width:720px) {
+      nav { flex-direction:column; }
+      .nav-links { justify-content:center; gap:13px; }
+      .about-grid { grid-template-columns:1fr; }
+      .menu-grid { grid-template-columns:1fr; }
+      .gallery-grid { grid-template-columns:1fr 1fr; }
+      .gallery-grid img { height:160px; }
+      .hero { min-height:470px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav aria-label="Main navigation">
+      <a class="logo" href="#home" style="text-decoration:none">Home<span>Cafe</span> ☕</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home" style="max-width:none">
+      <div class="hero-content">
+        <p class="eyebrow">Fresh coffee • Fresh beginnings</p>
+        <h1>Your cozy corner for coffee & conversation.</h1>
+        <p>Take a little break from the busy day. Enjoy freshly brewed coffee, delicious treats, and warm moments at Home Cafe.</p>
+        <a class="btn" href="#menu">Explore Our Menu</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="about-grid">
+        <img class="about-photo" src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1000&q=85" alt="Cozy cafe with coffee and seating">
+        <div class="about-copy">
+          <p class="eyebrow">A little about us</p>
+          <h2>Made with care, served with a smile.</h2>
+          <p>Home Cafe is a friendly place to slow down, meet friends, study, or simply enjoy your favourite cup of coffee.</p>
+          <p>We believe good coffee and a welcoming atmosphere can make an ordinary day feel special. Come in, get comfortable, and make yourself at home.</p>
+          <a class="btn" href="#contact">Visit Us</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu">
+      <div class="section-head">
+        <p class="eyebrow">Something delicious</p>
+        <h2>Our favourites</h2>
+        <p>A sample menu for your cafe website. You can edit the items and prices anytime.</p>
+      </div>
+      <div class="menu-grid">
+        <article class="menu-card"><div class="emoji">☕</div><h3>Cappuccino</h3><p>Rich espresso topped with smooth, creamy foam.</p><span class="price">₹120</span></article>
+        <article class="menu-card"><div class="emoji">🧊</div><h3>Cold Coffee</h3><p>Chilled coffee blended into a refreshing treat.</p><span class="price">₹150</span></article>
+        <article class="menu-card"><div class="emoji">🥐</div><h3>Fresh Croissant</h3><p>Flaky, buttery pastry baked for a lovely snack.</p><span class="price">₹90</span></article>
+        <article class="menu-card"><div class="emoji">🍰</div><h3>Chocolate Cake</h3><p>A soft, rich slice for your sweet cravings.</p><span class="price">₹140</span></article>
+        <article class="menu-card"><div class="emoji">🍵</div><h3>Masala Chai</h3><p>Indian tea brewed with warming spices.</p><span class="price">₹50</span></article>
+        <article class="menu-card"><div class="emoji">🥪</div><h3>Veg Sandwich</h3><p>A fresh, tasty sandwich for a quick bite.</p><span class="price">₹110</span></article>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="section-head"><p class="eyebrow">Cafe moments</p><h2>A taste of the atmosphere</h2><p>Good coffee, lovely details, and relaxing spaces.</p></div>
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=80" alt="Freshly prepared coffee">
+        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=700&q=80" alt="Warm cafe interior">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=80" alt="Cup of coffee on a table">
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="contact-inner">
+        <p class="eyebrow">We would love to see you</p>
+        <h2>Come say hello!</h2>
+        <p>Drop by for your favourite drink, or contact us for more information.</p>
+        <div class="contact-details"><span>📍 Your City, India</span><span>🕒 Mon–Sun: 9 AM – 9 PM</span><span>✉️ hello@homecafe.example</span></div>
+        <a class="btn" href="mailto:hello@homecafe.example">Email Us</a>
+        <p style="font-size:.85rem;margin-top:20px">Remember to replace the sample location and email with your real cafe details.</p>
+      </div>
+    </section>
+  </main>
+  <footer>© <span id="year">2026</span> Home Cafe. Made with ☕ and care.</footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
